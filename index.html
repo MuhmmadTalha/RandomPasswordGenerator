@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Random Password Generator</h2>
+            <p>Create strong and secure passwords to keep your account safe online.</p>
+        </div>
+        <div class="menu">
+            <div class="range">
+                <p>Password length: </p>
+                <button class="minus-btn" onclick="decreaseValue()">-</button>
+                <input type="range" min="5" max="50" value="8" class="slider" id="myRan"
+                    oninput="rangeValue.innerText = this.value">
+                <button class="plus-btn" onclick="increaseValue()">+</button>
+                <p id="rangeValue">8</p>
+            </div>
+            <br>
+            <hr>
+            <div class="A-Z">
+                <span>A-Z</span>
+                <input type="checkbox" class="tog" id="toggle">
+                <label for="toggle"></label>
+            </div>
+            <hr>
+            <div class="a-z">
+                <span>a-z</span>
+                <input type="checkbox" class="tog" id="toggle1" checked>
+                <label for="toggle1"></label>
+            </div>
+            <hr>
+            <div class="0-9">
+                <span>0-9</span>
+                <input type="checkbox" class="tog" id="toggle2" checked>
+                <label for="toggle2"></label>
+            </div>
+            <hr>
+            <div class="spChar">
+                <span>Special Characters</span>
+                <input type="checkbox" class="tog" id="toggle3">
+                <label for="toggle3"></label>
+            </div>
+            <div class="btn_div">
+                <button class="btn" onclick="gen()">Generate Password</button>
+            </div>
+            <div class="output typing-animation">
+                <h4 id="output"> </h4>
+                <span id="strength"></span>
+                <button id="copy" onclick="copyPass()">Copy Password</button>
+                <!-- Updated onclick function from "savePass" to "savedPass" -->
+                <button id="save" onclick="savedPass()">Save Password</button>
+            </div>
+        </div>
+        <div class="savepad">
+            <p> <strong> Your saved passwords: </strong></p>
+            <ul id="savpass"></ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

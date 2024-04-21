@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #bcbcbc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.head{
+    text-align: center;
+    /* margin-top: 50px; */
+    padding-bottom: 50px;
+}
+.menu {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ded6d6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.range {
+    margin-top: 20px;
+    position: relative; /* Add relative positioning */
+}
+
+.minus-btn,
+.plus-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute; /* Add absolute positioning */
+    top: 50%; /* Align vertically in the middle */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.minus-btn {
+    left: 0; /* Position to the left */
+}
+
+.plus-btn {
+    right: 0; /* Position to the right */
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: calc(100% - 66px);
+    margin: 0 35px; /* Adjusted margin to accommodate buttons */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #2196F3;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #2196F3;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+.checkbox-group {
+    margin-top: 20px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-group input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group input[type="checkbox"]:checked+label::before {
+    background-color: #2196F3;
+}
+
+.btn_div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0f83d8;
+}
+
+.output {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#copy {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    /* Adjusted margin */
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    /* Ensure it's displayed as block element */
+    margin-left: auto;
+    /* Center it horizontally */
+    margin-right: auto;
+
+}
+
+#copy:hover {
+    background-color: #bcbcbc;
+}
+
+#strength {
+    margin-top: 10px;
+    font-weight: bold;
+    color: red;
+    display: block;
+    text-align: center;
+}
+
+#strength.good {
+    color: orange;
+    /* Color for passwords of medium strength */
+}
+
+#strength.strong {
+    color: green;
+    /* Color for strong passwords */
+}
+
+#strength.very-strong {
+    color: blue;
+    /* Color for very strong passwords */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.typing-animation h4,
+.typing-animation span {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end) forwards;
+}
+
+.savepad{
+    position: fixed;
+    top: 5vh;
+    right: 5vh;
+    width: 30vh;
+    padding: 3vh;
+    background-color: #ffffff;
+    border-radius: 2vh;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+#save {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#save:hover {
+    background-color: #45a049;
+}
